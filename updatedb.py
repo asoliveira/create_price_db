@@ -36,7 +36,7 @@ def update_prices(log_file):
         cotacao = pd.read_excel(sheet_of_live_prices, thousandas='.', decimal=',',
                                 sheet_name=sheet_name_of_live_prices)
     except PermissionError as e:
-        prin('error ======================================')
+        print('error ======================================')
         with open(log_file, 'a') as log:
             log.write(40*'=')
             log.write(f'Tivemos um erro e não atualizamos os dados em {today}')

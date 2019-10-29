@@ -20,10 +20,10 @@ live_prices_db = 'C://Users/alex_/OneDrive/Base Dados/prices.db'
 time_interval = 10
 
 #Path of daytrade database
-daytrade_db = 'to_daytrade.db'
+daytrade_db = 'C://Users/alex_/OneDrive/Base Dados/to_daytrade.db'
 
 #Frequency of daytradade db.
-freq = '1min'
+freq = '5min'
 
 #Please verify the name of the columns below in you dde sheet. These example 
 #the name is in portugues.
