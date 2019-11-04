@@ -93,7 +93,7 @@ def update_prices(log_file):
             c.execute(create_table)
             c.execute(insert_table)
         
-    con.commit()
+            con.commit()
     con.close()
 
 def make_daytrade_db(asset, live_prices_db, daytrade_db, freq, volume,
