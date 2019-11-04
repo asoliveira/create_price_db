@@ -24,7 +24,7 @@ import os
 import unidecode
 import sqlite3
 from datetime import datetime 
-import time
+
 
 
 def update_prices(log_file):
@@ -58,7 +58,7 @@ def update_prices(log_file):
         except ValueError:
             print(f'The column{c} raised a error when converting to numeric.\
                   As a workaround it was droped')
-            cotacao.drop(labels=c,axis=1, inplace=True)
+#            cotacao.drop(labels=c,axis=1, inplace=True)
 
       
     
