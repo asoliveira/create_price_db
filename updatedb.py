@@ -121,7 +121,7 @@ def make_daytrade_db(asset, live_prices_db, daytrade_db, freq, volume,
             f.write(str(e))
         print(str(e))
     
-#    df = df.drop_duplicates()
+    df = df.drop_duplicates()
     df =  df.dropna()
     if len(df) <= 5:
         print(f'Os dados lidos da tabela {live_prices_db} são poucos para {asset}')
