@@ -131,7 +131,7 @@ def make_daytrade_db(asset, live_prices_db, daytrade_db, freq, volume,
     col_to_use = [volume, quantity, last_price]
     for c in col_to_use:
         df[c.lower()] = pd.to_numeric(df[c.lower()])
-    qtd_vol = df[[volume.lower(), quantity.lower()]].resample(freq).sum()
+    qtd_vol = df[[volume.lower(), quantity.lower()]].resample(freq).last()
     dfcandle = df[last_price.lower()].resample(freq).ohlc()
 
     
