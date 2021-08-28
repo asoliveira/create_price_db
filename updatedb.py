@@ -27,9 +27,18 @@ from datetime import datetime
 
 
 
-def update_prices(log_file):
+def update_prices(log_file, sheet_of_live_prices, sheet_name_of_live_prices):
     """
     Read the prices quotes of the sheet with a dde link.
+
+    Parameters
+    -----------
+    sheet_name_of_live_prices: str
+        Name of sheet with the DDE link.
+
+    sheet_of_live_prices: str
+        path of the Excel file with DDL link.
+
     """
     today = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     try:
@@ -88,7 +97,6 @@ def update_prices(log_file):
                     values += '"{}", '.format(value)
             values = values[:-2] + ')'
             insert_table += values
-            
             
             c.execute(create_table)
             c.execute(insert_table)
