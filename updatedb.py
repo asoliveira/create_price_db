@@ -33,7 +33,7 @@ def update_prices(log_file):
     """
     today = datetime.today().strftime('%Y-%m-%d %H:%M:%S')
     try:
-        cotacao = pd.read_excel(sheet_of_live_prices, thousandas='.', decimal=',',
+        cotacao = pd.read_excel(sheet_of_live_prices, thousands='.',
                                 sheet_name=sheet_name_of_live_prices)
     except PermissionError as e:
         print('error ======================================')
@@ -189,7 +189,7 @@ def main():
                 print(f'starting update the data in {daytrade_db} of {asset}')
                 make_daytrade_db(asset, live_prices_db, daytrade_db, freq, 
                         volume, quantity, last_price,col_names, log_file)               
-#        time.sleep(time_interval)
+        time.sleep(time_interval)
         count += 1
         
         
